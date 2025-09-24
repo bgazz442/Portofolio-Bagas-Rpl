@@ -1,204 +1,391 @@
-/* Tombol Register Animasi Sederhana */
-form#registerForm button[type="submit"] {
-    background: #43e97b;
-    color: #fff;
-    border: none;
-    border-radius: 25px;
-    padding: 12px 32px;
-    font-size: 1.1em;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 0 8px 2px #43e97b44;
-    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
-    outline: none;
-}
-
-form#registerForm button[type="submit"]:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 18px 6px #43e97b88;
-    background: #38f9d7;
-}
-html {
-    height: 100%;
-    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 40%, #f7971e 100%);
-    background-attachment: fixed;
-    background-size: cover;
-    font-family: 'SF Pro Display', 'Segoe UI', 'Roboto', Arial, sans-serif;
-}
-/* Rainbow Gemini Glow for Login Button */
-
-.login-button {
-    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 30%, #4facfe 60%, #f7971e 100%);
-    color: #fff;
-    border: none;
-    border-radius: 25px;
-    padding: 12px 32px;
-    font-size: 1.1em;
-    font-weight: bold;
-    font-family: inherit;
-    cursor: pointer;
-    box-shadow: 0 0 10px 2px #38f9d7;
-    transition: box-shadow 0.3s, background 0.3s, transform 0.2s;
-    position: relative;
-    z-index: 1;
-    outline: none;
-}
-
-
-.login-button:hover {
-    animation: rainbow-glow 2.5s linear infinite;
-    background: linear-gradient(90deg, #43e97b, #38f9d7, #4facfe, #f7971e, #f953c6, #43e97b, #38f9d7);
-    transform: scale(1.05);
-}
-
-
-@keyframes rainbow-glow {
-    0% {
-        box-shadow: 0 0 20px 5px #00f2fe, 0 0 40px 10px #ff6a00;
-    }
-    10% {
-        box-shadow: 0 0 22px 6px #43e97b, 0 0 42px 12px #f953c6;
-    }
-    20% {
-        box-shadow: 0 0 24px 7px #f7971e, 0 0 44px 14px #38f9d7;
-    }
-    30% {
-        box-shadow: 0 0 26px 8px #4facfe, 0 0 46px 16px #ff6a00;
-    }
-    40% {
-        box-shadow: 0 0 28px 9px #00f2fe, 0 0 48px 18px #43e97b;
-    }
-    50% {
-        box-shadow: 0 0 30px 10px #f953c6, 0 0 50px 20px #f7971e;
-    }
-    60% {
-        box-shadow: 0 0 28px 9px #38f9d7, 0 0 48px 18px #4facfe;
-    }
-    70% {
-        box-shadow: 0 0 26px 8px #ff6a00, 0 0 46px 16px #00f2fe;
-    }
-    80% {
-        box-shadow: 0 0 24px 7px #43e97b, 0 0 44px 14px #f953c6;
-    }
-    90% {
-        box-shadow: 0 0 22px 6px #f7971e, 0 0 42px 12px #38f9d7;
-    }
-    100% {
-        box-shadow: 0 0 20px 5px #00f2fe, 0 0 40px 10px #ff6a00;
-    }
-}
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 body {
-    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 40%, #f7971e 100%);
-    background-attachment: fixed;
-    background-size: cover;
     margin: 0;
     padding: 0;
-    text-align: center;
+    font-family: 'Press Start 2P', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 60%, #16213e 100%);
+    color: #fff;
     min-height: 100vh;
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url('HD Wallpaper Mountains Sea Ocean Clouds Night 4k Ultra.jpg') no-repeat center center/cover;
-    filter: blur(12px) brightness(0.7);
-    z-index: -1;
-}
-
-
-/* Style for the login form container */
-.form-container {
-    max-width: 400px;
-    padding: 24px 20px 32px 20px;
-    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 30%, #4facfe 60%, #f7971e 100%);
-    border-radius: 24px;
-    box-shadow: 0 8px 32px 0 rgba(41, 138, 217, 0.71);
-    text-align: center;
-    margin: 40px auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-    backdrop-filter: blur(16px) saturate(180%);
-    border: 2px solid rgba(41, 151, 202, 0.614);
-}
-
-.form-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 40px 15px rgba(79, 172, 254, 0.7);
-    border: 2px solid #4facfe;
-}
-h1 {
-    color: #000;
-    margin-bottom: 20px;
-}
-input[type="text"],
-input[type="password"] {
+nav {
     width: 100%;
-    padding: 12px;
-    margin: 12px 0;
-    border: none;
-    border-radius: 12px;
-    box-sizing: border-box;
-    font-size: 1.1em;
-    font-family: inherit;
-    background: linear-gradient(90deg, #e0eafc 0%, #cfdef3 100%);
-    color: #222;
-    box-shadow: 0 2px 8px 0 rgba(79, 172, 254, 0.15);
-    transition: box-shadow 0.3s, background 0.3s, transform 0.3s;
+    background: #0f3460;
+    padding: 0 0 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px #1113;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-input[type="text"]:focus,
-input[type="password"]:focus {
-    outline: none;
-    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
-    color: #fff;
-    box-shadow: 0 4px 16px 0 rgba(79, 172, 254, 0.25);
-    transform: scale(1.03);
+.logo {
+    font-family: 'Press Start 2P', cursive;
+    color: #f0a500;
+    font-size: 1.2rem;
+    padding: 16px 32px;
 }
-.opacity-0 {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    animation: rainbow 10s linear infinite;
-    z-index: -1;
-}
-.login-button:hover::before {
-    opacity: 1;
-}
-  @keyframes rainbow {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-p {
-    margin-top: 20px;
-    text-align: center;
-}
-a {
-    text-decoration: none;
-    color: blue;
-}
-a:hover {
-    text-decoration: underline;
-}
-#message {
-    margin-top: 20px;
-    color: red;
-}
-#anjay {
-    color: rgb(232, 114, 114);
-    text-shadow: 0 0 20px blue;
+nav ul {
+    display: flex;
+    gap: 24px;
     margin: 0;
-    padding: 10px 0;
-    font-weight: bold;
-    font-size: 2em;
+    padding: 0 32px 0 0;
+    list-style: none;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+nav ul li a:hover {
+    color: #e94560;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(34, 40, 49, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.4);
+    padding: 32px;
+    border: 2px solid #0f3460;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    background: url('pngtree-letter-b-logo-design-vector-sign-business-card-templates-png-image_8209135.png') center/cover no-repeat;
+    border-radius: 50%;
+    margin: 0 auto 16px auto;
+    border: 4px solid #e94560;
+    box-shadow: 0 0 16px #e94560;
+}
+#name {
+    font-size: 2.5rem;
+    font-family: 'Press Start 2P', cursive;
+    color: #e94560;
+    margin-bottom: 8px;
+}
+#tagline {
+    font-size: 1.1rem;
+    color: #f0a500;
+    margin-bottom: 16px;
+}
+section {
+    margin-bottom: 32px;
+}
+section h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: #f0a500;
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+}
+.about p, .contact ul {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+}
+.skills-list li {
+    background: #222831;
+    color: #f0a500;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    border: 1.5px solid #e94560;
+    box-shadow: 0 2px 8px #0f3460;
+}
+.projects {
+    background: rgba(24, 24, 36, 0.7);
+    border-radius: 12px;
+    padding: 16px;
+}
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.project {
+    background: #222831;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px #0f3460;
+    padding: 16px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+}
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 32px #e94560;
+}
+.project-img {
+    width: 100px;
+    height: 100px;
+    background: url('https://cdn.pixabay.com/photo/2016/11/19/14/00/game-1837130_1280.png') center/cover no-repeat;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    border: 2px solid #f0a500;
+}
+.project-info h3 {
+    color: #e94560;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+.project-info p {
+    color: #fff;
+    font-size: 0.95rem;
+}
+.btn-demo {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 18px;
+    background: #e94560;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+.btn-demo:hover {
+    background: #f0a500;
+    color: #222831;
+}
+.achievements-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.achievements-list li {
+    background: #0f3460;
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    border: 1.5px solid #f0a500;
+    box-shadow: 0 2px 8px #e94560;
+}
+.testimonial-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.testimonial {
+    background: #222831;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px #0f3460;
+    padding: 16px;
+    width: 320px;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 12px;
+}
+.testimonial span {
+    display: block;
+    color: #f0a500;
+    margin-top: 8px;
+    font-size: 0.95rem;
+}
+.contact ul {
+    list-style: none;
+    padding: 0;
+}
+.contact li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+.contact span {
+    color: #f0a500;
+}
+footer {
+    text-align: center;
+    padding: 18px 0;
+    background: #0f3460;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 32px;
+    letter-spacing: 1px;
+}
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 99;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background: #e94560;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    box-shadow: 0 2px 8px #0f3460;
+    transition: background 0.2s;
+}
+#scrollTopBtn:hover {
+    background: #f0a500;
+    color: #222831;
+}
+@media (max-width: 1000px) {
+    .container {
+        padding: 16px;
+    }
+    .project-list, .testimonial-list, .skills-list, .achievements-list {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .project, .testimonial {
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    nav ul {
+        gap: 8px;
+        padding: 0 8px 0 0;
+    }
+    .logo {
+        padding: 12px 8px;
+        font-size: 1rem;
+    }
+    .container {
+        margin: 8px auto;
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 60%, #16213e 100%);
+    color: #fff;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(34, 40, 49, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.4);
+    padding: 32px;
+    border: 2px solid #0f3460;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    background: url('https://cdn.pixabay.com/photo/2017/01/31/13/14/avatar-2026510_1280.png') center/cover no-repeat;
+    border-radius: 50%;
+    margin: 0 auto 16px auto;
+    border: 4px solid #e94560;
+    box-shadow: 0 0 16px #e94560;
+}
+#name {
+    font-size: 2.5rem;
+    font-family: 'Press Start 2P', cursive;
+    color: #e94560;
+    margin-bottom: 8px;
+}
+#tagline {
+    font-size: 1.1rem;
+    color: #f0a500;
+    margin-bottom: 16px;
+}
+section {
+    margin-bottom: 32px;
+}
+section h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: #f0a500;
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+}
+.about p, .contact ul {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+.projects {
+    background: rgba(24, 24, 36, 0.7);
+    border-radius: 12px;
+    padding: 16px;
+}
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.project {
+    background: #222831;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px #0f3460;
+    padding: 16px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+}
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 32px #e94560;
+}
+.project-img {
+    width: 100px;
+    height: 100px;
+    background: url('https://cdn.pixabay.com/photo/2016/11/19/14/00/game-1837130_1280.png') center/cover no-repeat;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    border: 2px solid #f0a500;
+}
+.project-info h3 {
+    color: #e94560;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+.project-info p {
+    color: #fff;
+    font-size: 0.95rem;
+}
+.contact ul {
+    list-style: none;
+    padding: 0;
+}
+.contact li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+.contact span {
+    color: #f0a500;
+}
+.profile-photo img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+    display: block;
+    margin: 0 auto 10px auto;
 }
